@@ -1,0 +1,203 @@
+.orange-service-banner {
+    .banner-main {
+        background: url('../images/service1-banner.jpg');
+        background-position: center;
+        background-size: cover;
+        position: relative;
+
+        .banner-content {
+            margin-top: 130px;
+            margin-bottom: 105px;
+
+            .text {
+                .slider-heading {
+                    margin-bottom: 30px;
+
+                    .main-heading {
+                        font-family: $secondary_font;
+                        text-transform: uppercase;
+                        font-weight: 700;
+                        font-size: 3rem;
+                        color: $white;
+                        margin-bottom: 0;
+                    }
+
+                    .sub-heading {
+                        font-family: $primary_font;
+                        font-weight: 300;
+                        text-align: left;
+                        font-size: 2rem;
+                        color: $white;
+                        margin-bottom: 0;
+
+                        span {
+                            font-weight: 700;
+                            color: $primary;
+                        }
+                    }
+                }
+
+                .banner-button {
+                    display: inline-block;
+                    font-family: $primary_font;
+                    font-weight: 700;
+                    font-size: 1em;
+                    color: $white;
+                    text-align: center;
+                    background-color: $primary;
+                    padding: 10px 30px;
+                    border-radius: 4px;
+                    transition: background-color .15s ease-in-out;
+
+                    &:hover {
+                        text-decoration: none;
+                        background-color: scale-color($primary, $lightness: +20%);
+                    }
+                }
+            }
+
+            // Question Box
+            .question-box {
+                background-color: $white;
+                padding: 40px 30px;
+                border-radius: 4px;
+                width: 100%;
+
+                .question-title {
+                    font-family: $secondary_font;
+                    font-weight: 700;
+                    font-size: 1.46em;
+                    text-align: center;
+                    color: $black;
+                    margin-bottom: 30px;
+                }
+
+                button {
+                    background: transparent;
+                    outline: none;
+                    border: 2px solid $primary;
+                    display: inline-block;
+                    padding: 15px 20px;
+                    font-family: $primary_font;
+                    font-weight: 700;
+                    text-align: left;
+                    color: $primary;
+                    margin-bottom: 18px;
+                    width: 100%;
+                    border-radius: 4px;
+                    transition: color .15s ease-in-out, background .15s ease-in-out, box-shadow .19s ease-out;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    &:hover, &:focus, &:active {
+                        background: $primary;
+                        background: linear-gradient(to right, $primary 1%,#f38511 100%);
+                        border-color: transparent;
+                        color: $white;
+                        box-shadow: 0 0 9px 0px #0000004f;
+                    }
+                }
+            }
+        }
+
+        .banner-shape {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+    }
+}
+
+// Service Page Top Section
+.service-page-top-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    .text {
+        margin-top: 30px;
+
+        p {
+            font-family: $primary_font;
+            font-weight: 400;
+            color: $black;
+            text-align: center;
+            font-size: 1.3em;
+
+            .highlight {
+                color: $primary;
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+.service-page-services-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    .service-main {
+        margin-bottom: 55px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        .image {
+            img {
+                width: 100%;
+            }
+        }
+
+        .content {
+            .heading {
+                padding-left: 40px;
+                position: relative;
+
+                .main-heading {
+                    font-family: $secondary_font;
+                    font-weight: 700;
+                    color: $black;
+                    text-transform: uppercase;
+                    text-align: left;
+
+                    span {
+                        color: $primary;
+                    }
+                }
+
+                .heading-span {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 8px;
+                    height: 100%;
+                    background-color: $primary;
+                }
+
+                .heading-span2 {
+                    position: absolute;
+                    left: 8px;
+                    top: 0;
+                    width: 8px;
+                    height: 100%;
+                    background-color: adjust-color($primary, $alpha: -0.5);
+                }
+            }
+
+            .text {
+                padding-left: 40px;
+                margin-top: 20px;
+
+                p {
+                    font-family: $primary_font;
+                    font-weight: 400;
+                    font-size: 1rem;
+                    color: $black;
+                }
+            }
+        }
+    }
+}
