@@ -19,7 +19,13 @@ function changeCallSectionPos(resize = false) {
     return;
 }
 
-let aboutSectionVideo = $('.orange-about-section .orange-about-video .video-main video');
+$(window).on('load', function() {
+    changeCallSectionPos();
+    $(window).resize(() => {
+        changeCallSectionPos(true);
+    })
+
+    let aboutSectionVideo = $('.orange-about-section .orange-about-video .video-main video');
 let aboutSectionVideoPlay = $('.orange-about-section .container .orange-about-video .video-main .play-icon');
 let aboutSectionVideoOverlay = $('.orange-about-section .container .orange-about-video .video-main .overlay');
 let aboutSectionVideoPaused = false;
@@ -45,9 +51,4 @@ aboutSectionVideo.click(() => {
     aboutSectionVideoPaused = false;
 })
 
-$(window).on('load', function() {
-    changeCallSectionPos();
-    $(window).resize(() => {
-        changeCallSectionPos(true);
-    })
 });
