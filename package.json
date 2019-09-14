@@ -7,7 +7,7 @@
     "dev": "webpack --progress --mode=development",
     "watch": "npm run dev -- --watch",
     "dist": "webpack -p --mode=production",
-    "start": "http-server -c-1 -g ./"
+    "start": "http-server -c-1 -g --cors ./"
   },
   "keywords": [],
   "author": "",

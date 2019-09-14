@@ -424,7 +424,7 @@
                 }
             }
 
-            button {
+            button, input[type=submit] {
                 border: none;
                 display: inline-block;
                 width: 100%;
@@ -437,6 +437,7 @@
                 text-align: center;
                 padding: 10px;
                 font-size: 0.8rem;
+                border-radius: 0;
                 transition: color .15s ease-in-out, background-color .15s ease-in-out;
 
                 &:hover {
@@ -825,6 +826,79 @@
                 &:hover {
                     background: $primary;
                     color: $white;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+.orange-blog-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    .blogs {
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 30px;
+
+        .blog {
+            padding: 8px;
+            border-radius: 7px;
+            cursor: pointer;
+            
+        transition: background 0.3s ease-in-out;
+
+            &:hover {
+                background: $secondary;
+
+                .date {
+                    color: $white;
+                }
+
+                .title {
+                    color: $white;
+                }
+            }
+
+            img {
+                border-radius: 8px;
+                max-width: 100%;
+                transition: opacity 0.11s ease-in-out;
+
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+
+            .date {
+                margin-top: 15px;
+                margin-left: 20px;
+                margin-bottom: 10px;
+                border-bottom: 4px solid $primary;
+                display: inline-block;
+                font-family: $primary_font;
+                font-weight: 700;
+                font-size: 1.23em;
+                color: $black;
+            }
+
+            a {
+                .title {
+                    font-family: $secondary_font;
+                    font-weight: 700;
+                    color: $black;
+                    font-size: 1.3rem;
+                    margin-left: 20px;
+                    transition: opacity 0.11s ease-in-out;
+
+                    &:hover {
+                        opacity: 0.8;
+                    }
+                }
+
+                &:hover {
                     text-decoration: none;
                 }
             }
