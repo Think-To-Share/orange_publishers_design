@@ -26,29 +26,39 @@ $(window).on('load', function() {
     })
 
     let aboutSectionVideo = $('.orange-about-section .orange-about-video .video-main video');
-let aboutSectionVideoPlay = $('.orange-about-section .container .orange-about-video .video-main .play-icon');
-let aboutSectionVideoOverlay = $('.orange-about-section .container .orange-about-video .video-main .overlay');
-let aboutSectionVideoPaused = false;
+    let aboutSectionVideoPlay = $('.orange-about-section .container .orange-about-video .video-main .play-icon');
+    let aboutSectionVideoOverlay = $('.orange-about-section .container .orange-about-video .video-main .overlay');
+    let aboutSectionVideoPaused = false;
 
-aboutSectionVideoPlay.click(() => {
-    aboutSectionVideoOverlay.fadeOut();
-    aboutSectionVideoPlay.fadeOut();
-    aboutSectionVideo.get(0).play();
+    aboutSectionVideoPlay.click(() => {
+        aboutSectionVideoOverlay.fadeOut();
+        aboutSectionVideoPlay.fadeOut();
+        aboutSectionVideo.get(0).play();
 
-    aboutSectionVideo.on('ended', function() {
-        aboutSectionVideoEnded = true;
-    })
-});
+        aboutSectionVideo.on('ended', function() {
+            aboutSectionVideoEnded = true;
+        })
+    });
 
-aboutSectionVideo.click(() => {
-    if(!aboutSectionVideoPaused) {
-        aboutSectionVideo.get(0).pause();
-        aboutSectionVideoPaused = true;
-        return;
-    }
+    aboutSectionVideo.click(() => {
+        if(!aboutSectionVideoPaused) {
+            aboutSectionVideo.get(0).pause();
+            aboutSectionVideoPaused = true;
+            return;
+        }
 
-    aboutSectionVideo.get(0).play();
-    aboutSectionVideoPaused = false;
-})
+        aboutSectionVideo.get(0).play();
+        aboutSectionVideoPaused = false;
+    });
+
+    // Banner Query Form 
+
+    $('#bannerService input').focus(function() {
+        $(this).siblings('.servicece-list').fadeIn('fast');
+    });
+
+    $('#bannerService input').blur(function() {
+        $(this).siblings('.servicece-list').fadeOut('fast');
+    });
 
 });

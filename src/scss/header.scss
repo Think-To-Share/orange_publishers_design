@@ -1,0 +1,59 @@
+header {
+    nav {
+        .header-main {
+            display: grid;
+            grid-template-columns: 1fr 6fr;
+            grid-gap: 30px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+
+            .logo {
+                img {
+                    max-width: 100%;
+                }
+            }
+
+            .menu {
+                .main-menu {
+                    .call {
+                        display: flex;
+                        float: right;
+
+                        .icon {
+                            border: 2px solid $primary;
+                            color: $primary;
+
+                            i {
+                                line-height: 3;
+                                padding-left: 15px;
+                                padding-right: 15px;
+                            }
+                        }
+
+                        .text {
+                            padding-left: 10px;
+
+                            p {
+                                font-family: $secondary_font;
+                                font-weight: 700;
+                                color: $black;
+                                font-size: 1.2em;
+                                text-transform: uppercase;
+                                text-align: center;
+                            }
+
+                            a {
+                                font-family: $secondary_font;
+                                font-weight: 700;
+                                color: $primary;
+                                font-size: 1.2em;
+                                text-transform: uppercase;
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

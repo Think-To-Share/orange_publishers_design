@@ -1,0 +1,58 @@
+.orange-footer {
+    background: $primary;
+    position: relative;
+    padding-top: 141px;
+
+    .footer-shape {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .footer-widget {
+        color: $white;
+
+        a {
+            font-family: $primary_font;
+            font-weight: 400;
+            font-size: 0.8em;
+            color: $white;
+            transition: opacity 0.11s ease-in-out;
+
+            &:hover {
+                text-decoration: none;
+                opacity: 0.8;
+            }
+        }
+
+        p {
+            font-family: $primary_font;
+            font-weight: 400;
+            font-size: 0.8em;
+            color: $white;
+        }
+
+        .footer-widget-title {
+            font-family: $secondary_font;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 1.1em;
+            color: $white;
+        }
+
+        ul {
+            padding: 0;
+            list-style-type: none;
+
+            li {
+                a {
+                    font-family: $primary_font;
+                    font-weight: 400;
+                    font-size: 0.8em;
+                    color: $white;
+                }
+            }
+        }
+    }
+}

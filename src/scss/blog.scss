@@ -1,0 +1,269 @@
+// Service Page Top Section
+.blog-page-top-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    .text {
+        p {
+            font-family: $primary_font;
+            font-weight: 400;
+            color: $black;
+            text-align: center;
+            font-size: 1.3em;
+
+            .highlight {
+                color: $primary;
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+.blog-page-blogs-section {
+    padding-top: 10px;
+    padding-bottom: 50px;
+
+    .main-blogs {
+        .blog {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 60px;
+
+            .img-container {
+                width: 90%;
+                height: 100%;
+                margin: 0 auto;
+                position: relative;
+                overflow: hidden;
+
+                &:hover {
+                    img {
+                        transform: scale(1.1) rotate(-4deg);
+                    }
+                }
+
+                img{
+                    max-width: 100%;
+                    transition: transform 0.11s ease-in-out;
+                }
+
+                .overlay {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(to bottom, transparent 0%, $secondary 100%);
+                }
+            }
+
+            .orange-blog-title {
+                font-family: $primary_font;
+                font-weight: 700;
+                font-size: 1.1em;
+                color: $white;
+                position: absolute;
+                bottom: 20px;
+                left: calc(5% + 50px);
+                max-width: 68%;
+
+                &::before {
+                    content: "";
+                    height: 2px;
+                    width: 200px;
+                    background: $primary;
+                    position: absolute;
+                    top: 7px;
+                    right: calc(100% + 5px);
+                }
+
+                a {
+                    color: $white;
+                    text-decoration: none;
+                    transition: opacity 0.11s ease-in-out;
+
+                    &:hover {
+                        opacity: 0.8;
+                    }
+                }
+            }
+
+            .icon {
+                width: 40px;
+                height: 40px;
+                position: absolute;
+                top: 50%;
+                right: 13px;
+                transform: translateY(-50%);
+
+                &:hover {
+                    .outer {
+                        animation: make-smaller 0.9s ease-in-out 1;
+                        transform: scale(0);
+                    }
+                }
+
+                .outer {
+                    width: 54px;
+                    height: 54px;
+                    position: absolute;
+                    left: -7px;
+                    top: -7px;
+                    background: $primary;
+                    opacity: 0.3;
+                    z-index: -1;
+                }
+
+                a {
+                    display: inline-block;
+                    color: $white;
+                    width: 100%;
+                    height: 100%;
+                    text-align: center;
+                    background: $primary;
+                    position: relative;
+                    
+
+                    i {
+                        text-align: center;
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%)
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Single Blog Section Refers: single.php
+.page-title {
+    font-family: $secondary_font;
+    font-weight: 700;
+    color: $black;
+}
+
+.post-meta {
+    margin-top: 20px;
+
+    p {
+        font-family: $primary_font;
+        font-weight: 700;
+        color: $black;
+        display: inline-block;
+        padding-right: 15px;
+        margin-bottom: 0;
+    }
+}
+
+.post-thumbnail {
+    margin-top: 20px;
+}
+
+.post-content {
+    margin-top: 20px;
+    font-family: $primary_font;
+
+    p {
+        font-family: $primary_font;
+        font-weight: 400;
+        color: $black;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: $secondary_font;
+        font-weight: 700;
+        color: $black;
+    }
+
+    a {
+        color: $primary;
+        font-style: italic;
+    }
+
+    blockquote {
+        font-family: $primary_font;
+        font-weight: 700;
+        color: $primary;
+        padding-left: 15px;
+        border-left: 12px solid $primary;
+
+        p, h1, h2, h3, h4, h5, h6 {
+            font-family: $primary_font;
+            font-weight: 700;
+            color: $primary;
+        }
+    }
+}
+
+.right-widget {
+    background: $white;
+    margin-bottom: 30px;
+
+    .widget-title {
+        font-family: $secondary_font;
+        font-weight: 700;
+        font-size: 1.56rem;
+        color: $white;
+        background: $primary;
+        padding: 10px 15px;
+        margin-bottom: 0;
+    }
+
+    .widget-main-content {
+        border: 2px solid;
+        border-left-color: adjust-color($secondary, $alpha: -0.4);
+        border-right-color: adjust-color($secondary, $alpha: -0.4);
+        border-bottom-color: adjust-color($secondary, $alpha: -0.4);
+        border-top: none;
+
+        ul {
+            list-style-type: none;
+            margin-left: 2.5em;
+            padding: 0;
+
+            li {
+                font-family: $primary_font;
+                font-weight: 400;
+                position: relative;
+                color: $black;
+
+                &::before {
+                    content: "\003e";
+                    font-family: $primary_font;
+                    position: absolute;
+                    left: -2em;
+                    width: 2em;
+                    text-align: center;
+                    line-height: inherit;
+                    color: $primary;
+                    font-weight: 700;
+                }
+
+                a {
+                    font-family: $primary_font;
+                    font-weight: 400;
+                    color: $black;
+                    transition: opacity 0.11s ease-in-out;
+
+                    &:hover {
+                        text-decoration: none;
+                        opacity: 0.8;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@keyframes make-smaller {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
