@@ -397,6 +397,12 @@
 
     .orange-new-book-cat-content {
         .books {
+            display: none;
+
+            &:first-child {
+                display: flex;
+            }
+
             .book {
                 margin-bottom: 20px;
                 img {

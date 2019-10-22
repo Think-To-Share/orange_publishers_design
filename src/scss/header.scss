@@ -15,10 +15,22 @@ header {
 
             .menu {
                 .main-menu {
+                    .page-menu {
+                        .header-menu-container {
+                            ul {
+                                list-style-type: none;
+                                margin: 0;
+                                padding: 0;
+
+                                li {
+                                    display: inline-block;
+                                }
+                            }
+                        }
+                    }
+
                     .call {
                         display: flex;
-                        float: right;
-
                         .icon {
                             border: 2px solid $primary;
                             color: $primary;

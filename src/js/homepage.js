@@ -61,4 +61,30 @@ $(window).on('load', function() {
         $(this).siblings('.servicece-list').fadeOut('fast');
     });
 
+    $('#bannerServiceCat').change(function() {
+        let catId = $(this).children('option:selected').attr('value');
+        let url = `http://localhost/orange/wp-json/wp/v2/pages?service_cat=${catId}`;
+
+        $.ajax({
+            url: url
+        }).done(function(data) {
+            $('.servicece-list').children('li').remove();
+
+            if(data[0] != undefined) {
+                data.forEach(element => {
+                    $('.servicece-list').append(`<li><a href="${element.link}">${element.title.rendered}</a></li>`)
+                });
+            }
+        })
+    });
+
+    // Book Cover Section
+    $('.new-book-cat-title a').click(function(event) {
+        event.preventDefault();
+        let bookCatId = $(this).data("book");
+        $(this)
+        $('.orange-new-book-cat-content .books').hide();
+        $(bookCatId).css('display', 'flex');
+    });
+
 });
