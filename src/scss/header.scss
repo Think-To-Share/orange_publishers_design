@@ -21,9 +21,18 @@ header {
                                 list-style-type: none;
                                 margin: 0;
                                 padding: 0;
+                                padding: 15px 0;
 
                                 li {
                                     display: inline-block;
+                                    padding-right: 10px;
+
+                                    a {
+                                        color: $black;
+                                        font-family: $primary-font;
+                                        font-weight: 400;
+                                        text-transform: uppercase;
+                                    }
                                 }
                             }
                         }
