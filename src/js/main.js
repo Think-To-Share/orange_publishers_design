@@ -9,5 +9,9 @@ import '../scss/app.scss';
 // All Javascript
 window.jquery = window.$ = require('jquery');
 
+// Base URL
+window.baseURL = $('base').attr('href');
+
 // require('select2');
 require('./homepage');
+

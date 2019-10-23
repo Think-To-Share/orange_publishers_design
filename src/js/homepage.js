@@ -71,7 +71,7 @@ $(window).on('load', function() {
 
 function UpdateBannerCat(thisElem) {
     let catId = thisElem.children('option:selected').attr('value');
-    let url = `http://localhost/orange/wp-json/wp/v2/pages?service_cat=${catId}`;
+    let url = `${baseURL}/wp-json/wp/v2/pages?service_cat=${catId}`;
 
     $.ajax({
         url: url
