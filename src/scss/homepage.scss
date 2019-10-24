@@ -540,14 +540,6 @@
                 &::placeholder {
                     color: $secondary;
                 }
-
-                &:-ms-input-placeholder {
-                    color: $secondary;
-                }
-
-                &::-ms-input-placeholder {
-                    color: $secondary;
-                }
             }
 
             button, input[type=submit] {
