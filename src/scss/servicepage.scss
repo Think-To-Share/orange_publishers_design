@@ -174,7 +174,8 @@
     padding-top: 50px;
     padding-bottom: 50px;
 
-    .text {
+    .text,
+    .text-normal {
         margin-top: 30px;
 
         p {
@@ -183,11 +184,25 @@
             color: $black;
             text-align: center;
             font-size: 1.3em;
+        }
 
-            .highlight {
-                color: $primary;
-                font-weight: 700;
-            }
+        .highlight {
+            color: $primary;
+            font-weight: 700;
+        }
+    }
+
+    .text-normal {
+        margin-top: 0;
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: $secondary_font;
+            font-weight: 700;
+            color: $black;
+        }
+        p {
+            font-size: 1em;
+            text-align: left;
         }
     }
 }

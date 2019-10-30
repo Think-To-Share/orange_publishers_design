@@ -12,6 +12,11 @@
 
     .footer-widget {
         color: $white;
+        text-align: center;
+
+        @media (min-width: 576px) {
+            text-align: left;
+        }
 
         a {
             font-family: $primary_font;

@@ -1,0 +1,55 @@
+.package-table {
+    thead {
+        th {
+            font-family: $primary_font;
+            font-weight: 700;
+            color: $black;
+            text-align: center;
+
+            &.package-main {
+                background: #EAEAEA;
+                vertical-align: middle;
+            }
+        }
+
+        .package-title {
+            color: $white;
+
+            p {
+                color: $white;
+                width: 100%;
+                margin: 0;
+                text-align: center;
+            }
+        }
+
+        .package1-title {
+            background: #09336B;
+        }
+
+        .package2-title {
+            background: #A21444;
+        }
+
+        .package3-title {
+            background: #791504;
+        }
+
+        .package4-title {
+            background: #0A653E;
+        }
+    }
+
+    td, th {
+        text-align: center;
+        width: 20%;
+    }
+
+    th {
+        color: $black;
+
+        a {
+            color: $primary;
+        }
+    }
+}

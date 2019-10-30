@@ -5,6 +5,7 @@
 
 require('../../node_modules/bootstrap/js/src/carousel');
 require('../../node_modules/bootstrap/js/src/modal');
+require('../../node_modules/bootstrap/js/src/tab');
 
 function changeCallSectionPos(resize = false) {
     let callSection = $('.orange-call-section .container');
@@ -69,9 +70,9 @@ $(window).on('load', function() {
 
 });
 
-function UpdateBannerCat(thisElem) {
+function UpdateBannerCat(thisElem, search = "") {
     let catId = thisElem.children('option:selected').attr('value');
-    let url = `${baseURL}/wp-json/wp/v2/pages?service_cat=${catId}`;
+    let url = `${baseURL}/wp-json/wp/v2/pages?service_cat=${catId}&search=${search}`;
 
     $.ajax({
         url: url

@@ -55,7 +55,7 @@
                 margin-bottom: 80px;
 
                 @media (min-width: 768px) {
-                    font-size: 3vw;
+                    font-size: 2vw;
                 }
             }
 
@@ -354,15 +354,15 @@
 
         .new-book-cat-title-section {
             ul {
-                display: grid;
+                display: flex;
                 list-style-type: none;
                 padding: 0;
-                grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-                grid-gap: 15px;
+                justify-content: center;
 
                 .new-book-cat-title {
                     display: inline-block;
                     text-align: left;
+                    padding: 0 15px;
     
                     a {
                         text-align: left;
@@ -728,6 +728,8 @@
     .image {
         img {
             max-width: 250px;
+            display: flex;
+            margin: 0 auto;
         }
     }
 
@@ -774,14 +776,14 @@
 }
 
 .orange-testimonial-section {
-    padding-top: 70px;
+    padding-top: 120px;
     padding-bottom: 50px;
     background: url('../images/testimonial-bkg.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    min-height: 500px;
+    min-height: 400px;
 
     .heading {
         width: 100%;
@@ -957,8 +959,16 @@
     .blogs {
         margin-top: 30px;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
         grid-gap: 30px;
+
+        @media (min-width: 768px) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media (min-width: 1200px) {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
 
         .blog {
             padding: 8px;
