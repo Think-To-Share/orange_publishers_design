@@ -6,6 +6,7 @@
 require('../../node_modules/bootstrap/js/src/carousel');
 require('../../node_modules/bootstrap/js/src/modal');
 require('../../node_modules/bootstrap/js/src/tab');
+require('../../node_modules/bootstrap/js/src/collapse');
 
 function changeCallSectionPos(resize = false) {
     let callSection = $('.orange-call-section .container');
