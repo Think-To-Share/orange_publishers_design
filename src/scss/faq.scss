@@ -1,0 +1,38 @@
+.faq {
+    margin-bottom: 20px;
+
+    .faq-title {
+        font-family: $secondary_font;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 1em;
+        color: $white;
+        background: $primary;
+        padding: 10px 20px;
+        margin: 0;
+        cursor: pointer;
+        transition: opacity 0.11s ease-in-out;
+
+        @media (min-width: 992px) {
+            font-size: 1.3em;
+        }
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    .faq-content {
+        font-family: $primary_font;
+        font-weight: 400;
+        color: $black;
+        padding: 10px 20px;
+        border: 1px solid $secondary;
+        border-top-width: 0;
+        background: $white;
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+}
