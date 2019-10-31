@@ -1,19 +1,36 @@
-header {
+.orange-header {
     nav {
         .header-main {
-            display: grid;
-            grid-template-columns: 1fr 6fr;
-            grid-gap: 30px;
             padding-top: 15px;
             padding-bottom: 15px;
+            position: relative;
+
+            @media (min-width: 768px) {
+                display: grid;
+                grid-template-columns: 1fr 6fr;
+                grid-gap: 30px;
+            }
 
             .logo {
                 img {
-                    max-width: 100%;
+                    max-width: 40%;
+                    display: flex;
+                    margin: 0 auto;
+
+                    @media (min-width: 768px) {
+                        display: block;
+                        max-width: 100%;
+                    }
                 }
             }
 
             .menu {
+                display: none;
+
+                @media (min-width: 768px) {
+                    display: block;
+                }
+
                 .main-menu {
                     .page-menu {
                         .header-menu-container {
@@ -28,7 +45,7 @@ header {
                                 li {
                                     a {
                                         color: $black;
-                                        font-family: $primary-font;
+                                        font-family: $primary_font;
                                         font-weight: 400;
                                         text-transform: uppercase;
                                         padding-right: 15px;
@@ -73,6 +90,65 @@ header {
                             }
                         }
                     }
+                }
+            }
+
+            .responsive-menu-btn {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+                background: transparent;
+                border: none;
+                outline: none;
+                font-size: 27px;
+                color: $black;
+            }
+        }
+    }
+}
+
+.responsive-menu-container {
+    width: 270px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: $primary;
+    color: $white;
+
+    .responsive-menu-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: transparent;
+        border: none;
+        outline: none;
+        color: $white;
+        font-size: 22px;
+    }
+
+    .responsive-header-menu {
+        overflow: auto;
+        height: 100%;
+        margin-top: 45px;
+        padding-bottom: 120px;
+        padding-top: 10px;
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                width: 100%;
+                font-size: 20px;
+                padding: 0 10%;
+
+                a {
+                    color: $white;
+                    font-family: $primary_font;
+                    font-weight: 300;
                 }
             }
         }
