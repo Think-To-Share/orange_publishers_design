@@ -69,6 +69,12 @@ $(window).on('load', function() {
         $(bookCatId).css('display', 'flex');
     });
 
+    // Footer
+    $('.footer-map .icon').click(function() {
+        $(this).siblings('.overlay').remove()
+        $(this).remove();
+    })
+
 });
 
 function UpdateBannerCat(thisElem, search = "") {

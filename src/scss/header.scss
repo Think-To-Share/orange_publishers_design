@@ -113,9 +113,11 @@
     height: 100%;
     position: absolute;
     top: 0;
-    right: 0;
+    right: -100%;
+    z-index: 500;
     background: $primary;
     color: $white;
+    display: none;
 
     .responsive-menu-close {
         position: absolute;
@@ -130,7 +132,7 @@
 
     .responsive-header-menu {
         overflow: auto;
-        height: 100%;
+        height: calc(100% - 45px);
         margin-top: 45px;
         padding-bottom: 120px;
         padding-top: 10px;
@@ -152,5 +154,11 @@
                 }
             }
         }
+    }
+}
+
+body {
+    &.responsive-menu-opened {
+        overflow: hidden;
     }
 }

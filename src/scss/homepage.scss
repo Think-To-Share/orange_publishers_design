@@ -141,11 +141,11 @@
                         border-bottom: 1px solid $secondary;
                         display: none;
 
-                        @media (min-width: 768px) {
-                            left: 14px;
-                            top: calc(100% - 2px);
-                            width: calc(100% - 28px);
-                        }
+                        // @media (min-width: 768px) {
+                        //     left: 14px;
+                        //     top: calc(100% - 2px);
+                        //     width: calc(100% - 28px);
+                        // }
 
                         li {
                             padding: 10px;

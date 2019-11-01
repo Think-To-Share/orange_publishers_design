@@ -14,4 +14,5 @@ window.baseURL = $('base').attr('href');
 
 // require('select2');
 require('./homepage');
+require ('./responsive-menu');
 
