@@ -88,7 +88,15 @@ function UpdateBannerCat(thisElem, search = "") {
 
         if(data[0] != undefined) {
             data.forEach(element => {
-                $('.servicece-list').append(`<li><a href="${element.link}">${element.title.rendered}</a></li>`)
+                let title = "";
+
+                if(element.acf.home_page_menu_name !== null) {
+                    title = element.acf.home_page_menu_name;
+                }else {
+                    title = element.title.rendered;
+                }
+
+                $('.servicece-list').append(`<li><a href="${element.link}"> ${title}</a></li>`)
             });
         }
     })

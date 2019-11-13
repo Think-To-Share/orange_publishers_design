@@ -49,9 +49,11 @@
                 display: flex;
 
                 p {
-                    font-family: $primary;
+                    font-family: $primary_font;
                     font-weight: 700;
                     color: $black;
+                    margin-bottom: 0;
+                    align-self: center;
                 }
 
                 a {
