@@ -1,0 +1,35 @@
+.author-service-sidebar {
+    ul {
+        padding: 0;
+        list-style: none;
+
+        li {
+            display: flex;
+            width: 100%;
+            border: 0px solid $white;
+            border-top-width: 1px;
+            border-bottom-width: 1px;
+            background: #efefef;
+            color: $black;
+            transition: background-color 0.11s ease-in-out;
+
+            &:hover {
+                background: $primary;
+            }
+
+            a {
+                width: 100%;
+                padding: 10px;
+                color: $black;
+                font-family: $primary-font;
+                font-weight: 600;
+                transition: color 0.11s ease-in-out;
+
+                &:hover {
+                    color: $white;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
