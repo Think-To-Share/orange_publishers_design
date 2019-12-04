@@ -288,6 +288,10 @@
                     font-family: $primary_font;
                     font-weight: 400;
                     font-size: 1.4em;
+
+                    span {
+                        color: $primary;
+                    }
                 }
 
                 .heading-span {
@@ -329,19 +333,21 @@
                     font-family: $primary_font;
                     font-weight: 700;
                     font-size: 1rem;
-                    color: $primary;
+                    color: $white;
                     border: 2px solid $primary;
                     border-radius: .25rem;
-                    background: transparent;
+                    background: $primary;
                     padding: 10px 55px;
                     cursor: pointer;
                     margin-bottom: 30px;
-                    transition: color .15s ease-in-out,background-color .15s ease-in-out;
+                    // transition: color .15s ease-in-out,background-color .15s ease-in-out;
+                    transition: transform .15s ease-in-out;
 
                     &:hover {
-                        background: $primary;
-                        color: $white;
+                        // background: $primary;
+                        // color: $white;
                         text-decoration: none;
+                        transform: scale(1.2);
                     }
                 }
             }

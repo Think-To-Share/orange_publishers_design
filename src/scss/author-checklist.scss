@@ -1,0 +1,67 @@
+.do-and-dont-container {
+    .do-and-dont-header {
+        width: 100%;
+        background-color: $secondary;
+
+        a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: transparent;
+            font-family: $primary-font;
+            font-weight: 600;
+            color: $white;
+            font-size: 1.3em;
+            text-align: center;
+            transition: background-color 0.11s ease-in-out;
+
+            &:hover, &:focus, &.active {
+                text-decoration: none;
+                cursor: pointer;
+                background-color: $primary;
+            }
+        }
+    }
+
+    .do-and-dont-body {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+        
+        .text {
+            width: 100%;
+            position: relative;
+            border-top: 2px solid $white;
+            padding: 30px;
+            background-color: #f5f5f5;
+
+            &:nth-child(even) {
+                background-color: #e8e8e8;
+            }
+
+            span {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 30px;
+                color: $white;
+                background-color: $secondary;
+                padding-top: 20px;
+                text-align: center;
+                font-family: $secondary-font;
+                font-size: 20px;
+                font-weight: 600;
+            }
+
+            p {
+                font-family: $primary-font;
+                font-weight: 400;
+                color: $black;
+                margin-bottom: 0;
+                margin-left: 15px;
+            }
+        }
+    }
+}
