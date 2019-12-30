@@ -223,6 +223,7 @@
             .video-main {
                 position: relative;
                 margin-bottom: 40px;
+                border: 3px solid $primary;
 
                 @media (min-width: 992px) {
                     margin-bottom: 0;
@@ -240,7 +241,7 @@
                     width: 100%;
                     height: 100%;
                     background: $secondary;
-                    opacity: 0.68;
+                    opacity: 0;
                     cursor: pointer;
 
                     &:hover + .play-icon {
@@ -322,6 +323,7 @@
                     font-family: $primary_font;
                     font-weight: 400;
                     font-size: 0.9em;
+                    text-align: justify;
                 }
 
                 .orange-about-sec-button {
@@ -438,7 +440,7 @@
 
         @media (min-width: 992px) {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
             grid-gap: 35px;
         }
 
@@ -480,6 +482,12 @@
                 }
             }
 
+            a {
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+
             img {
                 max-width: 60%;
                 display: flex;
@@ -495,6 +503,10 @@
                 text-align: center;
                 margin-top: 25px;
                 margin-bottom: 0;
+
+                &:hover {
+                    text-decoration: none;
+                }
             }
         }
     }
@@ -708,18 +720,17 @@
                     font-family: $primary_font;
                     font-weight: 700;
                     font-size: 1rem;
-                    color: $primary;
+                    color: $white;
                     border: 2px solid $primary;
                     border-radius: .25rem;
-                    background: transparent;
+                    background: $primary;
                     padding: 10px 55px;
                     cursor: pointer;
                     margin-bottom: 30px;
-                    transition: color .15s ease-in-out,background-color .15s ease-in-out;
+                    transition: transform .15s ease-in-out;
 
                     &:hover {
-                        background: $primary;
-                        color: $white;
+                        transform: scale(1.2);
                         text-decoration: none;
                     }
                 }
@@ -955,21 +966,20 @@
                 font-family: $primary_font;
                 font-weight: 700;
                 font-size: 1rem;
-                color: $primary;
+                color: $white;
                 border: 2px solid $primary;
                 border-radius: .25rem;
-                background: transparent;
+                background: $primary;
                 padding: 10px 55px;
                 cursor: pointer;
-                transition: color .15s ease-in-out,background-color .15s ease-in-out;
+                transition: transform .15s ease-in-out;
 
                 @media(min-width: 1200px) {
                     margin: auto 0;
                 }
 
                 &:hover {
-                    background: $primary;
-                    color: $white;
+                    transform: scale(1.2);
                     text-decoration: none;
                 }
             }
@@ -1065,18 +1075,17 @@
         font-family: $primary_font;
         font-weight: 700;
         font-size: 1rem;
-        color: $primary;
+        color: $white;
         border: 2px solid $primary;
         border-radius: .25rem;
-        background: transparent;
+        background: $primary;
         padding: 10px 55px;
         cursor: pointer;
         margin-top: 30px;
-        transition: color .15s ease-in-out,background-color .15s ease-in-out;
+        transition: transform .15s ease-in-out;
 
         &:hover {
-            background: $primary;
-            color: $white;
+            transform: translate(1.2);
             text-decoration: none;
         }
     }

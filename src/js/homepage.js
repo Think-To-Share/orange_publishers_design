@@ -36,68 +36,66 @@ $(window).on('load', function() {
         aboutSectionVideoPlay.fadeOut();
         aboutSectionVideo.attr('controls', true);
         aboutSectionVideo.get(0).play();
-
-        aboutSectionVideo.on('ended', function() {
-            aboutSectionVideoEnded = true;
-        })
+        aboutSectionVideoPlay.remove();
+        aboutSectionVideoOverlay.remove();
     });
 
     // Banner Query Form 
 
-    $('#bannerService input').focus(function() {
-        $(this).siblings('.servicece-list').fadeIn('fast');
-    });
+    // $('#bannerService input').focus(function() {
+    //     $(this).siblings('.servicece-list').fadeIn('fast');
+    // });
 
-    $('#bannerService input').blur(function() {
-        $(this).siblings('.servicece-list').fadeOut('fast');
-    });
+    // $('#bannerService input').blur(function() {
+    //     $(this).siblings('.servicece-list').fadeOut('fast');
+    // });
 
-    UpdateBannerCat($('#bannerServiceCat'));
-    $('#bannerServiceCat').change(function() {
-        UpdateBannerCat($(this));
-    });
+    // UpdateBannerCat($('#bannerServiceCat'));
+    // $('#bannerServiceCat').change(function() {
+    //     UpdateBannerCat($(this));
+    // });
 
     // Book Cover Section
-    $('.new-book-cat-title a').click(function(event) {
-        event.preventDefault();
-        let bookCatId = $(this).data("book");
+    // $('.new-book-cat-title a').click(function(event) {
+    //     event.preventDefault();
+    //     let bookCatId = $(this).data("book");
 
-        $('.new-book-cat-title').removeClass('active');
-        $(this).parents('.new-book-cat-title').addClass('active');
+    //     $('.new-book-cat-title').removeClass('active');
+    //     $(this).parents('.new-book-cat-title').addClass('active');
 
-        $('.orange-new-book-cat-content .books').hide();
-        $(bookCatId).css('display', 'flex');
-    });
+    //     $('.orange-new-book-cat-content .books').hide();
+    //     $(bookCatId).css('display', 'flex');
+    // });
 
-    // Footer
-    $('.footer-map .icon').click(function() {
-        $(this).siblings('.overlay').remove()
-        $(this).remove();
-    })
+    // // Footer
+    // $('.footer-map .icon').click(function() {
+    //     $(this).siblings('.overlay').remove()
+    //     $(this).remove();
+    // })
 
 });
 
-function UpdateBannerCat(thisElem, search = "") {
-    let catId = thisElem.children('option:selected').attr('value');
-    let url = `${baseURL}/wp-json/wp/v2/pages?service_cat=${catId}&search=${search}`;
+// function UpdateBannerCat(thisElem, search = "") {
+//     let catId = thisElem.children('option:selected').attr('value');
+//     let url = `${baseURL}/wp-json/wp/v2/pages?per_page=100&service_cat=${catId}&search=${search}`;
 
-    $.ajax({
-        url: url
-    }).done(function(data) {
-        $('.servicece-list').children('li').remove();
+//     $.ajax({
+//         url: url
+//     }).done(function(data) {
+//         $('.servicece-list').children('li').remove();
 
-        if(data[0] != undefined) {
-            data.forEach(element => {
-                let title = "";
+//         if(data[0] != undefined) {
+//             data.forEach(element => {
+//                 let title = "";
 
-                if(element.acf.home_page_menu_name !== null) {
-                    title = element.acf.home_page_menu_name;
-                }else {
-                    title = element.title.rendered;
-                }
+//                 if(element.acf.home_page_menu_name !== null) {
+//                     title = element.acf.home_page_menu_name;
+//                 }else {
+//                     title = element.title.rendered;
+//                 }
 
-                $('.servicece-list').append(`<li><a href="${element.link}"> ${title}</a></li>`)
-            });
-        }
-    })
-}
+//                 $('.servicece-list').append(`<li><a href="${element.link}"> ${title}</a></li>`)
+//             });
+//         }
+//     })
+// }
