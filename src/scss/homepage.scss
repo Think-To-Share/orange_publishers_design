@@ -59,6 +59,33 @@
                 }
             }
 
+            .contact-btn {
+                display: inline-block;
+                vertical-align: middle;
+                user-select: none;
+                white-space: nowrap;
+                text-align: center;
+                font-family: $primary_font;
+                font-weight: 700;
+                font-size: 1rem;
+                color: $white;
+                border: 2px solid $primary;
+                border-radius: .25rem;
+                background: $primary;
+                padding: 10px 55px;
+                cursor: pointer;
+                margin-bottom: 30px;
+                // transition: color .15s ease-in-out,background-color .15s ease-in-out;
+                transition: transform .15s ease-in-out;
+        
+                &:hover {
+                    // background: $primary;
+                    // color: $white;
+                    text-decoration: none;
+                    transform: scale(1.2);
+                }
+            }
+
             .orange-banner-form {
                 #bannerServiceCat {
                     outline: none;
@@ -860,18 +887,18 @@
                 //     line-height: 1;
                 // }
 
-                &::before {
-                    content: "\f10d";
-                    font-family: 'Font Awesome 5 Free';
-                    font-weight: 900;
-                    text-align: right;
-                    position: absolute;
-                    top: 0;
-                    left: -5px;
-                    width: 10%;
-                    font-size: 38px;
-                    line-height: 1;
-                }
+                // &::before {
+                //     content: "\f10d";
+                //     font-family: 'Font Awesome 5 Free';
+                //     font-weight: 900;
+                //     text-align: right;
+                //     position: absolute;
+                //     top: 0;
+                //     left: -5px;
+                //     width: 10%;
+                //     font-size: 38px;
+                //     line-height: 1;
+                // }
 
                 p {
                     font-family: $primary_font;
@@ -880,6 +907,29 @@
                     text-align: center;
                     width: 80%;
                     margin: 0 auto;
+                }
+            }
+
+            .image-box {
+                width: 80px;
+                height: 80px;
+                margin: 10px auto;
+                border-radius: 50%;
+                border: 2px solid $white;
+                overflow: hidden;
+
+                img {
+                    max-width: 100%;
+                }
+            }
+
+            .name-box {
+                .name {
+                    font-family: $primary_font;
+                    font-weight: 600;
+                    font-size: 1.2em;
+                    text-align: center;
+                    margin: 0;
                 }
             }
         }
