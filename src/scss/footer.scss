@@ -81,3 +81,63 @@
         transform: translate(-50%, -50%);
     }
 }
+
+#shareDetailModal {
+    input[type=text], input[type=tel], input[type=email] {
+        background: transparent;
+        outline: none;
+        border: 2px solid $primary;
+        display: inline-block;
+        padding: 15px 20px;
+        font-family: $primary_font;
+        font-weight: 700;
+        text-align: left;
+        color: $primary;
+        margin-bottom: 18px;
+        width: 100%;
+        border-radius: 4px;
+        transition: color .15s ease-in-out, background-color .15s ease-in-out, box-shadow .19s ease-out;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &::placeholder {
+            color: $primary;
+            transition: color .15s ease-in-out
+        }
+
+        &:hover, &:focus, &:active {
+            background-color: $primary;
+            background: linear-gradient(to right, $primary 1%,#f38511 100%);
+            border-color: transparent;
+            color: $white;
+            box-shadow: 0 0 9px 0px #0000004f;
+
+            &::placeholder {
+                color: $white;
+            }
+        }
+    }
+
+    input[type=submit] {
+        background: $primary;
+        background: linear-gradient(to right, $primary 1%,#f38511 100%);
+        outline: none;
+        border: none;
+        display: inline-block;
+        padding: 5px 15px;
+        font-family: $primary_font;
+        font-weight: 700;
+        text-align: center;
+        color: $white;
+        margin-bottom: 0;
+        width: 40%;
+        border-radius: 4px;
+        transition: box-shadow .19s ease-out;
+
+        &:hover, &:focus, &:active {
+            box-shadow: 0 0 9px 0px #0000004f;
+        }
+    }
+}
