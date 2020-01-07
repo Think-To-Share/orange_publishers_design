@@ -120,6 +120,10 @@
         }
     }
 
+    input[type=file] {
+        margin-bottom: 18px;
+    }
+
     input[type=submit] {
         background: $primary;
         background: linear-gradient(to right, $primary 1%,#f38511 100%);

@@ -56,22 +56,22 @@ $(window).on('load', function() {
     // });
 
     // Book Cover Section
-    // $('.new-book-cat-title a').click(function(event) {
-    //     event.preventDefault();
-    //     let bookCatId = $(this).data("book");
+    $('.new-book-cat-title a').click(function(event) {
+        event.preventDefault();
+        let bookCatId = $(this).data("book");
 
-    //     $('.new-book-cat-title').removeClass('active');
-    //     $(this).parents('.new-book-cat-title').addClass('active');
+        $('.new-book-cat-title').removeClass('active');
+        $(this).parents('.new-book-cat-title').addClass('active');
 
-    //     $('.orange-new-book-cat-content .books').hide();
-    //     $(bookCatId).css('display', 'flex');
-    // });
+        $('.orange-new-book-cat-content .books').hide();
+        $(bookCatId).css('display', 'flex');
+    });
 
-    // // Footer
-    // $('.footer-map .icon').click(function() {
-    //     $(this).siblings('.overlay').remove()
-    //     $(this).remove();
-    // })
+    // Footer
+    $('.footer-map .icon').click(function() {
+        $(this).siblings('.overlay').remove()
+        $(this).remove();
+    })
 
 });
 

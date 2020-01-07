@@ -8,6 +8,7 @@
         .banner-content {
             margin-top: 130px;
             margin-bottom: 105px;
+            min-height: 160px;
 
             .text {
                 .slider-heading {
@@ -19,6 +20,7 @@
                         font-weight: 700;
                         font-size: 3rem;
                         color: $white;
+                        text-align: center;
                         margin-bottom: 0;
                     }
 
@@ -28,6 +30,7 @@
                         text-align: left;
                         font-size: 2rem;
                         color: $white;
+                        text-align: center;
                         margin-bottom: 0;
 
                         span {
