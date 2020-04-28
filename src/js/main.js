@@ -16,4 +16,5 @@ window.baseURL = $('base').attr('href');
 require('./homepage');
 require ('./responsive-menu');
 require('./author-checklist');
-
+require('./back-to-top');
+require('./homepage-animation');
