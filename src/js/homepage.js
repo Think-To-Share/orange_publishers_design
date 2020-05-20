@@ -3,10 +3,11 @@
 // });
 // $('#bannerService').select2();
 
-require('../../node_modules/bootstrap/js/src/carousel');
-require('../../node_modules/bootstrap/js/src/modal');
-require('../../node_modules/bootstrap/js/src/tab');
-require('../../node_modules/bootstrap/js/src/collapse');
+require('bootstrap/js/src/carousel');
+require('bootstrap/js/src/modal');
+require('bootstrap/js/src/tab');
+require('bootstrap/js/src/collapse');
+//require('bootstrap/js/src/scrollspy');
 
 function changeCallSectionPos(resize = false) {
     let callSection = $('.orange-call-section .container');
