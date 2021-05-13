@@ -455,6 +455,38 @@
                 }
             }
         }
+        .btn {
+            text-align: center;
+            width: 100%;
+            
+            a{
+                display: inline-block;
+            vertical-align: middle;
+            user-select: none;
+            white-space: nowrap;
+            text-align: center;
+            font-family: $primary_font;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: $white;
+            border: 2px solid $primary;
+            border-radius: .25rem;
+            background: $primary;
+            padding: 15px 30px;
+            cursor: pointer;
+            margin-bottom: 30px;
+            // transition: color .15s ease-in-out,background-color .15s ease-in-out;
+            transition: transform .15s ease-in-out;
+    
+            &:hover {
+                // background: $primary;
+                // color: $white;
+                text-decoration: none;
+                transform: scale(1.2);
+            }
+        }
+            
+        }
     }
 }
 

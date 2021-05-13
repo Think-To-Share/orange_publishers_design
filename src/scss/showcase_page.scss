@@ -1,0 +1,78 @@
+.orange-new-book-section{
+    &.showcase-page{
+
+        .orange-new-book-cat-content{
+
+            .books{  
+                  
+                .book{
+                    position: relative;
+
+
+                    .overlay{
+                        position: absolute;
+                        left:0;
+                        top:0;
+                        height:100%;
+                        width:100%;
+                        cursor: pointer;
+
+                        &::after{
+                            content:'';
+                            position: absolute;
+                            left:0;
+                            top:0;
+                            height: 0;
+                            width:100%;
+                            background-color: #fff;
+                            opacity: 0.8;
+                            transition: all 0.5s ease-in-out;
+                            
+                        }
+                        
+                        .icon{
+                            position:absolute;
+                            width:30px;
+                            height: 30px;
+                            background-color: $primary;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            color:#fff;
+                            padding:20px;
+                            border-radius: 10em;
+                            left:50%;
+                            top:50%;
+                            transform:translate(-50%,-40%);
+                            opacity: 0;
+                            z-index: 2;
+                            transition: all 0.3s ease-in-out;
+                            transition-delay: 0.4s;
+                        }
+                    }
+                    @media(max-width:768px)
+                        {
+                            display: flex;
+                            justify-content: center;
+                        }
+                    &:hover,&:focus,&:active{
+
+                        .overlay{
+
+                            .icon{
+                                opacity: 1;
+                                transform: translate(-50%,-50%);
+                            }
+                            &::after{
+                                height: 100%;
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+   
+}
