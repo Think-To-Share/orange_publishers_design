@@ -1,3 +1,14 @@
+.showcase-page-heading{
+    font-family: $secondary_font;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    span{
+        color:#e76224;
+    }
+}
+
 .orange-new-book-section{
     &.showcase-page{
 
