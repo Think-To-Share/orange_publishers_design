@@ -100,7 +100,36 @@
                         </div>
                         <div class="orange-new-book-cat-content d-none d-md-block">
                             <div id="new-book-cat1" class="books row m-0">
-                                <div class="book col-md-2"><img src="./src/images/book-1.jpg" alt=""></div>
+                                <div class="book col-md-2"><img src="./src/images/book-1.jpg" alt="" data-toggle="modal" data-target="#book-1"></div>
+
+                                <div class="modal fade" id="book-1" tabindex="-1" role="dialog" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Book Name</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <img src="./src/images/book-1.jpg" alt="" class="img-fluid">
+                                                        </div>
+                                                        <div class="col-md-6 offset-md-1 ml-auto">
+                                                            Book Description
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                <a href="#" target="_blank" type="button" class="btn btn-warning">Buy Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="book col-md-2"><img src="./src/images/book-2.jpg" alt=""></div>
                                 <div class="book col-md-2"><img src="./src/images/book-3.jpg" alt=""></div>
                                 <div class="book col-md-2"><img src="./src/images/book-4.jpg" alt=""></div>

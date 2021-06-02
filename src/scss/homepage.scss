@@ -441,6 +441,8 @@
     }
 
     .orange-new-book-cat-content {
+        width: 100%;
+        
         .books {
             display: none;
 
@@ -450,8 +452,15 @@
 
             .book {
                 margin-bottom: 20px;
+
                 img {
                     max-width: 100%;
+                    transition: 0.5s all;
+
+                    &:hover {
+                        box-shadow: 3px 3px 12px 2px #808080;
+                        transform: translateY(-10px);   
+                    }
                 }
             }
         }
